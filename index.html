@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sw.css">
+    <title>Cards</title>
+</head>
+
+
+<header id="stickyheader">
+    <h1>Characters of Star Wars</h1>
+</header>
+
+<body>
+<section id="gridcontainer">
+    <div id="container">
+        
+    
+        <!-- <div class="scene">
+            <div class="card">
+                
+                    <div class="card_face card_face-front">
+                        <div id="front-info">
+                                <img src="https://vignette.wikia.nocookie.net/starwars/images/5/51/C-3PO_EP3.png/revision/latest?cb=20131005124036">
+                                <p>Jabba Desilijic Tiure</p>
+                        </div>
+                    </div>
+
+                    <div class="card_face card_face-back">
+                        <div id="back-info">
+                                <div id="back-header">
+                                    <h1 id="back-h1">Jabba Desilijic Tiure</h1>
+                                </div>
+                            <div id="backblock">
+                                <div id="back-left">
+                                    <p>DOB</p>
+                                    <p>SEX</p>
+                                    <p>HGT</p>
+                                    <p>WGT</p>
+                                    <p>EYES</p>
+                                    <p>HAIR</p>
+                                </div>
+                                <div id="back-right">
+                                    <p>mmddyy</p>
+                                    <p>male</p>
+                                    <p>blue</p>
+                                    <p>blonde</p>
+                                    <p>66k</p>
+                                    <p>81m</p>
+                                </div>
+                            </div>     
+                        </div>
+                    </div>
+            </div>
+        </div> --> 
+
+    </div>
+
+</section>
+    <form class="newcardform" id="newCardForm">
+        <fieldset>
+            <legend>New Card</legend>
+                <div class="formline">
+                    <label class="two" for="name">Name: </label>
+                    <input class="box" type="text" name="name" id="name" required>
+                </div>
+                <div class="formline">
+                    <label class="two" for="DOB">DOB: </label>
+                    <input class="box" type="text" name="DOB" id="DOB" required>
+                </div>
+                <div class="formline">
+                    <label class="two" for="SEX">SEX: </label>
+                    <input class="box" type="text" name="SEX" id="SEX" required>
+                </div>
+                <div class="formline">
+                    <label class="two" for="HGT">HGT: </label>
+                    <input class="box" type="text" name="HGT" id="HGT" required>
+                </div>
+                <div class="formline">
+                    <label class="two" for="MASS">MASS: </label>
+                    <input class="box" type="text" name="MASS" id="MASS" required>
+                </div>
+                <div class="formline">
+                    <label class="two" for="EYES">EYES: </label>
+                    <input class="box" type="text" name="EYES" id="EYES" required>
+                </div>
+                <div class="formline">
+                    <label class="two" for="HAIR">HAIR: </label>
+                    <input class="box" type="text" name="HAIR" id="HAIR" required>
+                </div>
+                <!--<div class="formline">
+                    <label class="two" for="image">Image: </label>
+                    <input type="file" name="image" id="image" required>
+                </div>-->
+                <div class="formline">
+                    <input class="button" type="submit" value="Create">
+                </div>
+        </fieldset>
+
+    </form>
+</body>
+
+<footer>
+    <p>| © 2020 | Built by Brian Gibbons |</p>
+</footer>
+
+
+<script type="module" src="cards.js"></script>
+
+</html>
