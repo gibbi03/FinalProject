@@ -166,7 +166,9 @@ function get30SWPeople(params) {
                         </div>
                     </div>
     
+                    
             </div>
+            <input class="play" type="submit" value="Select and Play">
         </div> `
     }
 

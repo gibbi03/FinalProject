@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" onclick="jump()">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Star Wars Game</title>
+    <title>Jump Game</title>
     <link rel="stylesheet" href="gamestyle.css">
 </head>
 <body>
-    
+    <div class="game">
+        <img id="character" src="swimg/0.jpg">
+        <div id="bullet"></div>
+    </div>
+    <p>Score: <span id="scoreSpan"></span></p>
 </body>
 <script src="game.js"></script>
 </html>

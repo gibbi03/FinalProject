@@ -53,7 +53,7 @@ header h1 {
     .scene {
         width: 12rem;
         height: 16rem;
-        margin: 1rem 1rem;
+        margin: 1rem 1rem 3.5rem;
         perspective: 600px;
     }
     
@@ -84,6 +84,12 @@ header h1 {
     .card_face-front {
         background: rgb(85, 85, 85);
 
+    }
+
+    .play {
+        position: absolute;
+        top: 17rem;
+        left: 2.5rem;
     }
   
     img {
