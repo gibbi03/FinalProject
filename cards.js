@@ -122,6 +122,7 @@ function get30SWPeople(params) {
             mass: person.mass,
             eyes: person.eye_color,
             hair: person.hair_color,
+            
         }
     }  
     )
@@ -168,7 +169,7 @@ function get30SWPeople(params) {
     
                     
             </div>
-            <input class="play" type="submit" value="Select and Play">
+            <input class="play" type="submit" value="Select and Play" id="play${person.id}">
         </div> `
     }
 
