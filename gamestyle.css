@@ -3,11 +3,16 @@
     margin: 0;
     overflow-x: hidden;
 }
+
+body, nav, header, footer {
+    font-family: 'Archivo';
+}
+
 .game{
     width: 500px;
     height: 200px;
     border: 1px solid black;
-    margin: auto;
+    margin: 15rem auto auto;
     background-color: rgb(105, 105, 105);
 }
 
@@ -48,4 +53,8 @@ img {
 }
 p{
     text-align: center;
+    position: relative;
+    bottom: 9rem;
+    font-size: 3rem;
+    color: #EEDB00;
 }

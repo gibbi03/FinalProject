@@ -28,6 +28,7 @@ header h1 {
     color: white;
     border-bottom: .2rem solid #EEDB00;
     padding: 1rem;
+    font-size: 4rem;
 }
 
 
@@ -36,8 +37,6 @@ header h1 {
     body {
         background-color: #414141;
     }
-
-
 
 
 /*-----------CARDS-----------*/
@@ -79,6 +78,7 @@ header h1 {
         backface-visibility: hidden;
         border: .1rem solid #EEDB00;
         box-shadow: 0px 0px 3px .25px rgba(27, 27, 27, 0.356);
+        border-radius: .5rem;
     }
   
     .card_face-front {
@@ -86,17 +86,13 @@ header h1 {
 
     }
 
-    .play {
-        position: absolute;
-        top: 17rem;
-        left: 2.5rem;
-    }
   
     img {
         width: 12rem;
         height: 16rem;
         object-fit: cover;
         margin: 0;
+        border-radius: .5rem;
     }
 
     #front-info p {
@@ -112,6 +108,8 @@ header h1 {
         font-size: .9rem;
         border-top: .1rem solid #EEDB00;
         border-bottom: .1rem solid #EEDB00;
+        border-bottom-right-radius: .5rem;
+        border-bottom-left-radius: .5rem;
     }
 
 
@@ -133,6 +131,8 @@ header h1 {
         flex-flow: wrap;
         flex-grow: 1;
         color: #EEDB00;
+        border-top-left-radius: .5rem;
+        border-top-right-radius: .5rem;
     }
 
     #back-h1 {
@@ -140,6 +140,8 @@ header h1 {
         margin: 1rem auto;
         font-size: .8rem;
         text-transform: uppercase ;
+        border-top-left-radius: .5rem;
+        border-top-right-radius: .5rem;
     }
 
     #backblock {
@@ -165,6 +167,7 @@ header h1 {
 
 legend {
     text-align: center;
+    color: #EEDB00;
 }
 
 .two {
@@ -184,6 +187,7 @@ label {
     padding: .25rem 1rem;
     width: 50%;
     margin: 1.5rem auto .5rem;
+    background-color: #EEDB00;
 
 }
 
@@ -210,13 +214,62 @@ fieldset {
     justify-content: center;
     width: 20rem;
     border-radius: .5rem;
+    border: 1px solid #EEDB00;
+    background-color: black;
 }
 
 form {
     display: flex;
     justify-content: center;
+    margin-top: 3rem;
 }
 
+/*-------Buttons and Boxes------*/
+
+
+#playbutton {
+    position: absolute;
+    top: 17rem;
+    left: 2.5rem;
+    border-radius: .35rem;
+    padding: .3rem .5rem;
+    background-color: #414141;
+    color: #EEDB00;
+    border: 1px solid #EEDB00;
+}
+
+#playbutton:hover {
+    background-color: #EEDB00;
+    color: black;
+}
+
+
+
+#searchbutton{
+    border-radius: .35rem;
+    padding: .3rem .5rem;
+    background-color: #414141;
+    color: #EEDB00;
+    border: 1px solid #EEDB00;
+}
+
+#search-input {
+    width: 15rem;
+    padding: .3rem .5rem;
+    border: 1px solid #000000;
+    border-radius: .35rem;
+    flex-shrink: 2;
+}
+
+#searchbutton:hover {
+    background-color: #EEDB00;
+    color: black;
+}
+
+#searchbar {
+    margin: 3rem;
+    
+}
 
 /*----------FOOTER----------*/
 
