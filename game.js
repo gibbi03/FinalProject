@@ -16,15 +16,18 @@ function jump(){
 var checkDead = setInterval(function() {
     let characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
     let bulletLeft = parseInt(window.getComputedStyle(bullet).getPropertyValue("left"));
+    // Stop game if hit
     if(bulletLeft<20 && bulletLeft>-20 && characterTop>=130){
         bullet.style.animation = "none";
+    // Display score as pop-up alert
         alert("Game Over. score: "+Math.floor(counter/100));
         counter=0;
+    // Allow bullet to keep firing upon game restart
         bullet.style.animation = "bullet 1s infinite linear";
-    }else{
+    }
+    // Count score if not hit
+    else{
         counter++;
         document.getElementById("scoreSpan").innerHTML = Math.floor(counter/100);
     }
 }, 10);
-
-// Need function for clearing screen and adding new html
