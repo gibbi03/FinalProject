@@ -163,66 +163,6 @@ header h1 {
         text-transform: uppercase;
     }
 
-/* New Card*/
-
-legend {
-    text-align: center;
-    color: #EEDB00;
-}
-
-.two {
-    display: block;
-    padding-top: 1rem;
-}
-
-label {
-   font-size: .9rem;
-   color: #DCF2F0;
-   padding-bottom: .25rem;
-}
-
-.button {
-    border-radius: .5rem;
-    font-size: 1.25rem;
-    padding: .25rem 1rem;
-    width: 50%;
-    margin: 1.5rem auto .5rem;
-    background-color: #EEDB00;
-
-}
-
-.box {
-    color: black;
-    border: .25px solid #CBE1E0;
-    background-color: #ffffff;
-    border-radius: .5rem;
-    padding: .4rem;
-    margin-left: .3rem;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.568) inset;
-    
-}
-
-.formline {
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-fieldset {
-    display: flex;
-    justify-content: center;
-    width: 20rem;
-    border-radius: .5rem;
-    border: 1px solid #EEDB00;
-    background-color: black;
-}
-
-form {
-    display: flex;
-    justify-content: center;
-    margin-top: 3rem;
-}
 
 /*-------Buttons and Boxes------*/
 

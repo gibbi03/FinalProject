@@ -1,11 +1,12 @@
 *{
     padding: 0;
     margin: 0;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 body, nav, header, footer {
     font-family: 'Archivo';
+    background-image: url("https://www.cincyblind.org/wp-content/uploads/2017/06/starlight.jpg");
 }
 
 .game{
@@ -13,7 +14,7 @@ body, nav, header, footer {
     height: 200px;
     border: 1px solid black;
     margin: 15rem auto auto;
-    background-color: rgb(105, 105, 105);
+    background-color: gray;
 }
 
 img {
