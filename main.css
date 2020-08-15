@@ -1,6 +1,8 @@
 
 body, nav, header, footer {
     font-family: 'Archivo';
+    padding: 0;
+    margin: 0;
 }
 
     
@@ -36,16 +38,24 @@ header h1 {
 
     body {
         background-color: #414141;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin: 0 5rem;
     }
+    
+    #selecth1 {
 
+    }
 
 /*-----------CARDS-----------*/
 
 #container {
     display: flex;
     flex-flow: wrap row;
-    padding: 1rem 5rem;
     justify-content: center;
+    margin: 0;
+    padding: 0;
 }
 
 /*--------Card--------------*/
@@ -165,7 +175,6 @@ header h1 {
 
 
 /*-------Buttons and Boxes------*/
-
 
 #playbutton {
     position: absolute;

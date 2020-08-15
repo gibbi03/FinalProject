@@ -1,4 +1,5 @@
 //Game//
+//Define variables
 var character = document.getElementById("character");
 var bullet = document.getElementById("bullet");
 var counter=0;
@@ -19,15 +20,10 @@ var checkDead = setInterval(function() {
     // Stop game if hit
     if(bulletLeft<20 && bulletLeft>-20 && characterTop>=130){
         bullet.style.animation = "none";
-    // Display score as pop-up alert
-        alert("Game Over. score: "+Math.floor(counter/100));
+    // Display "You Died!" pop-up alert and restart counter
+        alert("You Died! Hit enter or OK to try again.");
         counter=0;
     // Allow bullet to keep firing upon game restart
         bullet.style.animation = "bullet 1s infinite linear";
     }
-    // Count score if not hit
-    else{
-        counter++;
-        document.getElementById("scoreSpan").innerHTML = Math.floor(counter/100);
-    }
-}, 10);
+});

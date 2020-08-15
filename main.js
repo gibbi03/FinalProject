@@ -1,35 +1,14 @@
-//Importing additional functions
 //import {redirectToGame} from './functions.js'
 //CARDS
 
 
-
-//Display  cards
+//Create variable that represents the #container id within the index.html document
 const cardContainer = document.querySelector('#container');
 
-//Get the Data from api and return json objects
-function get30SWPeople(params) {
-    let people = [];
-    const SWPromises = [
-        fetch('https://swapi.dev/api/people/?page=1'),
-        fetch('https://swapi.dev/api/people/?page=2'),
-        fetch('https://swapi.dev/api/people/?page=3')
-    ]
-   return Promise.all(SWPromises)
-    .then(ResponsesArr => {
-        return Promise.all(
-            ResponsesArr.map(data => data.json())
-            ) 
-    })
-    .then(jsonDataArr => {
-        people = jsonDataArr.reduce(
-            (acc, data) => [...acc, ...data.results]
-            , people)
-        return people;
-    })
-}
+//Import function that fetches apis and creates an array of 30 people objects out of the json data
+import { get30SWPeople } from './additoinalFunctions.js';
 
-//allowed 
+//Allow var arrayOfPeople to exist globally
 var arrayOfPeople = null;
 
 //Function that creates html for each person object
@@ -76,40 +55,42 @@ function cardHtml(person)
     </div> `
 }
 
-//set html for cards based on search input filter
+//Establishing function that creates html for cards based on search input
 function renderCards(cardSearchInput)
 {
-    // Make search input case insensitive
+//Make search input case insensitive
     cardSearchInput = cardSearchInput.toLowerCase();
 
-    // copying arrayOfPeople so filtering doesn't effect global array
+//Creating local arrayOfPeople copy so filtering doesn't effect global array
     var localArrayOfPeople = arrayOfPeople.slice();
 
-    // filter local array localArrayOfPeople if input is entered
+//Filter localArrayOfPeople based on input if any input is entered
     if(cardSearchInput.length > 0)
     {
         var filteredArrayOfPeople = localArrayOfPeople.filter(person => person.name.toLowerCase().includes(cardSearchInput));
     }
+//Otherwise filteredArrayOfPeople varialbe = the entire localArrayOfPeople
     else
     {
         var filteredArrayOfPeople = localArrayOfPeople;
     }
 
+//create array of html strings for each person object that has been filtered
     const cardHtmlArray = filteredArrayOfPeople.map(
         person => {
             return cardHtml(person)
         }
     )
 
-    //Creating string out of cardHtmlArray
+//Join newly created html strings so that it is one string of html rather than an array of strings
     const cardHtmlString = cardHtmlArray.join('');
 
-    //Place html string into index.html
+//Place newly created html string into index.html
     cardContainer.innerHTML = cardHtmlString;
 
-    //allow cards to flip on click    
+//define variable that represents the .card class within index.html document   
     var cards = document.querySelectorAll('.card');
-
+//allow cards to flip on click 
     cards.forEach(card => {
         card.addEventListener( 'click', 
             function() {
@@ -119,19 +100,24 @@ function renderCards(cardSearchInput)
     });
 }
 
-//create event listener for search submission to render cardHtml
-var searchBar = document.getElementById("searchbar");
-searchBar.addEventListener('submit', (event) => {
-    event.preventDefault(); //prevent page reload on submission
-    var cardSearchInput = document.getElementById("searchinput").value; //Define input value as variable
+//define variable that represents the #searchbar id within index.html document
+    var searchBar = document.getElementById("searchbar");
+//create event listener for search submission
+    searchBar.addEventListener('submit', (event) => {
+//prevent page reload on submission
+    event.preventDefault();
+//Create variable for search input value
+    var cardSearchInput = document.getElementById("searchinput").value; 
     
-//Run renderCards function
+//Render cards based on search input
     renderCards(cardSearchInput); 
 });
 
 
-//gather star wars people from api and render
-get30SWPeople().then(people => {
+//Get the Data from api and return json objects
+get30SWPeople()
+//Gather star wars people from json
+.then(people => {
     arrayOfPeople = people.map((person, idx) => {
         return {
             name: person.name,
@@ -146,6 +132,6 @@ get30SWPeople().then(people => {
     }  
     )
 
-    // Runing funciton to draw all cards when input is empty
+    // Render all cards when input is empty
     renderCards("");
 });
