@@ -11,7 +11,7 @@ function redirectToGame(playerId){
         <link rel="stylesheet" href="gamestyle.css">
     </head>
     <body>
-    <h1 id="gameh1">Refresh the page to select a new character!</h1>
+    <h1 id="gameh1">CLICK THE SCREEN TO JUMP!</h1>
         <div class="game">
             <img id="character" src="swimg/${playerId}.jpg">
             <div id="bullet"></div>

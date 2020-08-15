@@ -1,7 +1,6 @@
 *{
     padding: 0;
     margin: 0;
-    overflow: hidden;
 }
 
 body, nav, header, footer {
@@ -9,15 +8,21 @@ body, nav, header, footer {
     background-image: url("https://www.cincyblind.org/wp-content/uploads/2017/06/starlight.jpg");
 }
 
+h1 {
+    color: rgb(214, 214, 214);
+    padding: 2rem;
+}
+
 .game{
     width: 500px;
     height: 200px;
-    border: 1px solid black;
     margin: 15rem auto auto;
-    background-color: gray;
+    background: rgb(0,0,0);
+background: linear-gradient(180deg, rgba(0,0,0,0) 79%, rgba(133,141,149,1) 89%, rgba(255,255,255,0) 91%);
+    padding: 2rem;
 }
 
-img {
+.game img {
     width: 50%;
     object-fit: cover;
 }
@@ -51,11 +56,4 @@ img {
 @keyframes bullet{
     0%{left: 500px}
     100%{left: -20px}
-}
-p{
-    text-align: center;
-    position: relative;
-    bottom: 9rem;
-    font-size: 3rem;
-    color: #EEDB00;
 }

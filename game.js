@@ -21,7 +21,7 @@ var checkDead = setInterval(function() {
     if(bulletLeft<20 && bulletLeft>-20 && characterTop>=130){
         bullet.style.animation = "none";
     // Display "You Died!" pop-up alert and restart counter
-        alert("You Died! Hit enter or OK to try again.");
+        alert("YOU DIED! \n\nHit 'Enter' on the keyboard or click 'OK' to try again.\n\nTo select a new Character, refresh the page");
         counter=0;
     // Allow bullet to keep firing upon game restart
         bullet.style.animation = "bullet 1s infinite linear";
