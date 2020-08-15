@@ -18,8 +18,8 @@ h1 {
     height: 200px;
     margin: 15rem auto auto;
     background: rgb(0,0,0);
-background: linear-gradient(180deg, rgba(0,0,0,0) 79%, rgba(133,141,149,1) 89%, rgba(255,255,255,0) 91%);
-    padding: 2rem;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 79%, rgba(133,141,149,1) 89%, rgba(255,255,255,0) 91%);
+    padding: 2rem 1rem;
 }
 
 .game img {

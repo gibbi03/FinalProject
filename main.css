@@ -43,9 +43,17 @@ header h1 {
         align-content: center;
         margin: 0 5rem;
     }
+
+    #select {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 1rem;
+    }
     
     #selecth1 {
-
+        color: white;
+        font-size: 2.5rem;
     }
 
 /*-----------CARDS-----------*/
@@ -53,7 +61,7 @@ header h1 {
 #container {
     display: flex;
     flex-flow: wrap row;
-    justify-content: center;
+    justify-content: space-between;
     margin: 0;
     padding: 0;
 }
@@ -62,7 +70,7 @@ header h1 {
     .scene {
         width: 12rem;
         height: 16rem;
-        margin: 1rem 1rem 3.5rem;
+        margin: 1rem 1rem 4.5rem;
         perspective: 600px;
     }
     
@@ -205,7 +213,7 @@ header h1 {
 #searchinput {
     width: 15rem;
     padding: .3rem .5rem;
-    border: 1px solid #000000;
+    border: 1px solid #EEDB00;
     border-radius: .35rem;
     flex-shrink: 2;
 }
@@ -216,7 +224,6 @@ header h1 {
 }
 
 #searchbar {
-    margin: 3rem;
     
 }
 
